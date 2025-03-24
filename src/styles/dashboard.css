@@ -1,0 +1,96 @@
+.dashboard {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .dashboard-header h1 {
+    margin-top: 100px;
+    color: #ff6600;
+    font-size: 24px;
+  }
+  
+  .dashboard-header input {
+    width: 60px;
+    text-align: center;
+  }
+  
+  .parameters {
+    margin: 20px 0;
+  }
+  
+  .parameter-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff5e6;
+  }
+  
+  .parameter-table th,
+  .parameter-table td {
+    border: 1px solid #ffcc99;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .parameter-table th {
+    background-color: #ffcc99;
+    font-weight: bold;
+  }
+  
+  .parameter-details {
+    margin-top: 20px;
+    background-color: #ffcc99;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ff6600;
+    text-align: left;
+    width: 70%;
+    margin: 20px auto;
+  }
+  
+  .parameter-details h3 {
+    color: #333;
+  }
+  
+  .submission-link a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .submission-link a:hover {
+    text-decoration: underline;
+  }
+
+  .summary {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #fff5e6;
+    border: 1px solid #ffcc99;
+    border-radius: 5px;
+  }
+
+  .submission-feedback {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #fff5e6;
+    border: 1px solid #ffcc99;
+    border-radius: 5px;
+    text-align: left;
+    width: 70%;
+    margin: 20px auto;
+  }
+  
+  .submission-feedback h2 {
+    color: #ff6600;
+  }
+  
+  .submission-feedback p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  

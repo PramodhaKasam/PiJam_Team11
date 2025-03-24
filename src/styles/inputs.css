@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .app {
+    text-align: center;
+    padding: 20px;
+    padding-top: 80px;
+  } 
+
+  .header p {
+    color: #666;
+  }
+  
+  .table-section {
+    margin-top: 30px;
+  }
+  
+  .styled-table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff5e6;
+  }
+  
+  .styled-table th,
+  .styled-table td {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .styled-table th {
+    background-color: #ffcc99;
+  }
+  
+  .styled-table td input {
+    width: 95%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .assessment-table .low {
+    background-color: #ffcccc;
+    color: #990000;
+  }
+
+  .assessment-table .mid {
+    background-color: #FFFACD;
+    color: #B8860B;
+  }
+
+  .assessment-table .high {
+    background-color: #DFF2DF;
+    color:#228B22;
+  }
+  
+  .submit-btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-left:45%;
+  }
+  
+  .submit-btn:hover {
+    background-color: #e65c00;
+  }
+
+  .action-btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 5px 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .action-btn:hover {
+    background-color: #e65c00;
+  }
+  
+  .assessment-table .low {
+    background-color: #ffcccc; /* Light Red */
+    color: #990000; /* Dark Red */
+  }
+  
+  .assessment-table .mid {
+    background-color: #DFF2DF; /* Light Green */
+    color: #228B22; /* Forest Green */
+  }
+  
+  .assessment-table .high {
+    background-color: #FFFACD; /* Light Yellow */
+    color: #B8860B; /* Dark Goldenrod */
+  }
+  
+  
