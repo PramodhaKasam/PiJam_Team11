@@ -95,14 +95,13 @@ body {
     color: #990000; /* Dark Red */
   }
   
-  .assessment-table .mid {
+  .assessment-table .high {
     background-color: #DFF2DF; /* Light Green */
     color: #228B22; /* Forest Green */
   }
   
-  .assessment-table .high {
+  .assessment-table .mid {
     background-color: #FFFACD; /* Light Yellow */
     color: #B8860B; /* Dark Goldenrod */
   }
-  
   
