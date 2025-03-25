@@ -11,14 +11,9 @@ body {
   padding: 20px;
 }
 
-.button-container {
-  position: absolute;
-  top: 110px;
-  right: 10px;
-}
-
-.button-container button {
-  margin: 5px;
+ .rubric,
+ .ana,
+ .ana2{
   background-color: #ff6600;
   color: white;
   padding: 10px 15px;
@@ -26,9 +21,29 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
+  z-index: 999; 
 }
 
-.button-container button:hover {
+.rubric{
+  position: absolute;
+  top: 110px;
+  right: 10px;
+}
+
+.ana{
+  position: absolute;
+  top: 110px;
+  right: 150px;
+}
+
+.ana2{
+  position: absolute;
+  top: 110px;
+  right: 290px;
+}
+ .rubric,
+ .ana,
+ .ana2:hover {
   background-color: #e65c00;
 }
 
@@ -106,3 +121,5 @@ body {
 .close-btn:hover {
   background-color: #e65c00;
 }
+
+
