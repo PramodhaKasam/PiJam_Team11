@@ -34,7 +34,7 @@ body {
   }
   
   .styled-table th {
-    background-color: #ffcc99;
+    background-color: #e9a0a0;
   }
   
   .styled-table td input {
@@ -60,7 +60,7 @@ body {
   }
   
   .submit-btn {
-    background-color: #ff6600;
+    background-color:#008080;;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -75,8 +75,10 @@ body {
   }
 
   .action-btn {
-    background-color: #ff6600;
-    color: white;
+    background-color: transparent;
+    color: rgb(6, 6, 6);
+    font-size: 25px;
+    font-weight: bolder;
     padding: 5px 15px;
     margin: 10px;
     border: none;
@@ -85,7 +87,7 @@ body {
   }
   
   .action-btn:hover {
-    background-color: #e65c00;
+    background-color: #84b7f6;
   }
   
   .assessment-table .low {
