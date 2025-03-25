@@ -1,61 +1,89 @@
+/* General Page Styling */
 body {
-    margin: 0;
-    padding-left: 30px;
-    font-family: 'Arial', sans-serif;
-    background-color: #f9fafb; 
-    color: #333; 
-  }
-   
+  margin: 0;
+  padding-left: 30px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f4f8; /* Softer background for a modern feel */
+  color: #333;
+}
+
+/* Horizontal Box Container */
+.horizontal-box-container {
+  display: flex;
+  padding-top: 80px;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+/* Info Box Styling */
+.info-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 320px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.3s ease-in-out;
+  border-left: 5px solid #3498db; /* Accent border for emphasis */
+}
+
+/* Hover Effect */
+.info-box:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Box Title */
+.box-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #2c3e50;
+}
+
+/* Box Content */
+.box-content {
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: left;
+  color: #555;
+  flex: 1;
+}
+
+/* View Link */
+.view-link {
+  font-size: 15px;
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover Effect on View Link */
+.view-link:hover {
+  text-decoration: underline;
+  color: #0d5fd7;
+  transform: translateX(3px);
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .horizontal-box-container {
-    display: flex;
-    padding-top: 100px;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding-bottom: 10px;
+      flex-direction: column;
+      align-items: center;
   }
   
   .info-box {
-    background: #ffffff; 
-    border: 1px solid #dddddd; 
-    border-radius: 8px;
-    padding: 20px;
-    width: 300px;
-    min-height: 200px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+      width: 90%;
+      max-width: 400px;
   }
-  
-  .info-box:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
-  }
-  
-  .box-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .box-content {
-    font-size: 14px;
-    line-height: 1.5;
-    text-align: left;
-    color: #555;
-    flex: 1; 
-  }
-  
-  .view-link {
-    font-size: 14px;
-    color: #5a9bd4; 
-    text-decoration: none;
-  }
-  
-  .view-link:hover {
-    text-decoration: underline;
-    cursor: pointer;
-  }
+}
   

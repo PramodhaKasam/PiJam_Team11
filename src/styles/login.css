@@ -1,12 +1,13 @@
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f9fafb; 
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ded5e8, #c1d0eb); /* Modern Gradient Background */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
+
 
 .login-container {
     background: #ffffff; 
