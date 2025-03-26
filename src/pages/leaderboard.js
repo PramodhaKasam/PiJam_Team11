@@ -61,7 +61,7 @@ const LeaderboardPage = () => {
     <>
     <Navbar/>
     <div className="leaderboard-page">
-         <div className="button-container">
+         <div className="rubric">
           <button onClick={() => setShowRubric(true)}>Show Rubrics</button>
           <button onClick={() => setShowAnalysis(true)}>Show Analysis</button>
         </div>
@@ -112,3 +112,4 @@ const LeaderboardPage = () => {
 };
 
 export default LeaderboardPage;
+
