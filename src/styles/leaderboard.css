@@ -11,26 +11,61 @@ body {
   padding: 20px;
 }
 
-.button-container {
-  position: absolute;
-  top: 110px;
-  right: 10px;
-}
-
-.button-container button {
-  margin: 5px;
-  background-color: #ff6600;
+ .rubric,
+ .ana,
+ .ana2{
   color: white;
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
+  z-index: 999; 
 }
 
-.button-container button:hover {
-  background-color: #e65c00;
+.rubric{
+  position: absolute;
+  top: 110px;
+  right: 10px;
 }
+
+.ana{
+  position: absolute;
+  top: 110px;
+  right: 10px;
+}
+
+.ana2{
+  position: absolute;
+  top: 110px;
+  right: 290px;
+}
+.rubric, .ana, .ana2 {
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 999;
+  position: absolute;
+  top: 100px; /* Make buttons close to the top */
+}
+
+.rubric {
+  right: 160px; /* Position slightly away from the right edge */
+   /* Button color for Rubric */
+}
+
+.ana {
+  right: 90px; /* Slightly to the left of Rubric button */
+}
+
+.ana2 {
+  right: 20px; /* Rightmost button */
+  background-color: #7650de; /* Color for additional button */
+}
+
 
 .leaderboard {
   width: 1250px;
@@ -95,7 +130,7 @@ body {
 
 .close-btn {
   margin-top: 20px;
-  background-color: #ff6600;
+  background-color: #7650de;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -104,5 +139,21 @@ body {
 }
 
 .close-btn:hover {
-  background-color: #e65c00;
+  background-color: #7650de;
 }
+.rubric button{
+  background: #7650de;
+  color: #ffffff; 
+  display: flexbox;
+  margin-left: 13px;
+  justify-content: space-between;
+  padding: 12px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.rubric button:hover {
+    background: #7650de; 
+  }
