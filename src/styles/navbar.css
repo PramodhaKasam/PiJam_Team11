@@ -1,20 +1,21 @@
 .navbar {
-    background-color: #ffffff; 
-    border-bottom: 1px solid #e0e0e0; 
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    border-bottom: 1px solid rgba(224, 224, 224, 0.8); /* Light border */
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
     width: 100%;
-    padding: 10px 20px;
+    padding: 5px 15px; /* Thinner padding for a slimmer navbar */
     display: flex;
     justify-content: left;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 10; /* Ensures navbar stays on top */
 }
-  
+
 .navbar-brand {
-    font-size: 24px;
+    font-size: 22px; /* Slightly smaller text for a thinner look */
     font-weight: bold;
-    color: #333333; 
+    color: #007bff; /* Blue color for text */
     font-family: 'Arial', sans-serif;
+    letter-spacing: 0.5px; /* Adds some elegance */
 }
-  

@@ -1,107 +1,154 @@
+/* Body Styling */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-  }
-  
-  .app {
-    text-align: center;
-    padding: 20px;
-    padding-top: 80px;
-  } 
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff5e6; /* Light orange background */
+  color: #333333;
+}
 
-  .header p {
-    color: #666;
-  }
-  
-  .table-section {
-    margin-top: 30px;
-  }
-  
-  .styled-table {
-    width: 100%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background-color: #fff5e6;
-  }
-  
-  .styled-table th,
-  .styled-table td {
-    border: 1px solid #e0e0e0;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .styled-table th {
-    background-color: #e9a0a0;
-  }
-  
-  .styled-table td input {
-    width: 95%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
-  .assessment-table .low {
-    background-color: #ffcccc;
-    color: #990000;
-  }
+/* App Container */
+.app {
+  text-align: center;
+  padding: 20px;
+  padding-top: 0px;
+}
 
-  .assessment-table .mid {
-    background-color: #FFFACD;
-    color: #B8860B;
-  }
+/* Header Styling */
+.header h1 {
+  font-size: 28px;
+  margin-top: -60px;
+  color: #ff6600; /* Orange theme */
+  margin-bottom: 10px;
+}
 
-  .assessment-table .high {
-    background-color: #DFF2DF;
-    color:#228B22;
-  }
-  
-  .submit-btn {
-    background-color:#008080;;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-    margin-left:45%;
-  }
-  
-  .submit-btn:hover {
-    background-color: #e65c00;
-  }
+.header p {
+  font-size: 16px;
+  color: #666666; /* Neutral text */
+}
 
-  .action-btn {
-    background-color: transparent;
-    color: rgb(6, 6, 6);
-    font-size: 25px;
-    font-weight: bolder;
-    padding: 5px 15px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .action-btn:hover {
-    background-color: #84b7f6;
-  }
-  
-  .assessment-table .low {
-    background-color: #ffcccc; /* Light Red */
-    color: #990000; /* Dark Red */
-  }
-  
-  .assessment-table .high {
-    background-color: #DFF2DF; /* Light Green */
-    color: #228B22; /* Forest Green */
-  }
-  
-  .assessment-table .mid {
-    background-color: #FFFACD; /* Light Yellow */
-    color: #B8860B; /* Dark Goldenrod */
-  }
-  
+/* Rubric Section */
+.rubric-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 1200px;
+  background-color: #ffcc99;
+}
+
+.rubric-inputs {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+
+.rubric-inputs label {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 5px;
+}
+
+.rubric-inputs input {
+  padding: 10px;
+  border: 1px solid #ffcc99;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Table Section Styling */
+.table-section {
+  margin-top: 20px;
+}
+
+.styled-table {
+  width: 100%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #ffffff; /* White background for table */
+  border: 1px solid #ffcc99; /* Orange border */
+}
+
+.styled-table th,
+.styled-table td {
+  border: 1px solid #ffcc99; /* Orange borders */
+  padding: 10px;
+  text-align: center;
+}
+
+.styled-table th {
+  background-color: #ffbb88; /* Lighter orange for header */
+  color: #ffffff; /* White text for contrast */
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.styled-table td input {
+  width: 95%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+
+
+/* Add Row Button */
+.add-row-btn {
+  background-color: #ffbb88; /* Lighter orange */
+  color: white;
+  padding: 8px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-row-btn:hover {
+  background-color: #ff6600; /* Vibrant orange on hover */
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: #ff6600; /* Orange button */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #e65c00; /* Slightly darker orange */
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #ff6600; /* Orange button */
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+}
+
+.submit-btn:hover {
+  background-color: #e65c00; /* Slightly darker orange */
+}
+
+.ending{
+  width:1200px;
+  padding: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-top: 0px;
+  margin-top: -20px;
+  display: flex;
+  column-gap: 35%;
+}

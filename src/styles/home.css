@@ -1,168 +1,118 @@
-/* General Page Styling */
+/* Body Styling */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #f0f4f8; /* Softer background for a modern feel */
-  color: #333;
+  background-color: #f9fafb; /* Neutral background */
 }
 
 /* Home Container */
 .home-container {
-  padding: 30px;
-  position: relative; /* For positioning the leaderboard button */
-}
-
-/* Leaderboard Button Styling */
-.leaderboard-button-container {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-.leaderboard-button {
-  background-color: #1abc9c; /* Green for emphasis */
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
-}
-
-.leaderboard-button:hover {
-  background-color: #16a085; /* Darker green for hover */
-  transform: translateY(-3px);
-}
-
-/* Horizontal Box Container */
-.horizontal-box-container {
-  display: flex;
-  padding-top: 80px;
-  flex-wrap: wrap;
-  gap: 24px;
-  justify-content: center;
-  padding-bottom: 20px;
-}
-
-/* Info Box Styling */
-.info-box {
-  background: #ffffff;
-  border-radius: 12px;
+ 
   padding: 20px;
-  width: 320px;
-  min-height: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.3s ease-in-out;
-  border-left: 5px solid #3498db; /* Accent border for emphasis */
+  padding-top: 120px;
+  width: 1450px;
+  margin: 0 auto;
 }
 
-.info-box:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Box Title */
-.box-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 12px;
-  color: #2c3e50;
-}
-
-/* Box Content */
-.box-content {
-  font-size: 15px;
-  line-height: 1.6;
-  text-align: left;
-  color: #555;
-  flex: 1;
-}
-
-/* Start Evaluation Link */
-.start-evaluation-link {
-  font-size: 15px;
-  color: #1a73e8;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 10px;
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.start-evaluation-link:hover {
-  text-decoration: underline;
-  color: #0d5fd7;
-  transform: translateX(3px);
-  cursor: pointer;
-}
-
-/* Modal Styling */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+/* Header Section */
+.home-header {
+  position: relative;
+  height: 300px;
+  background: url('https://ideascale.com/wp-content/uploads/2024/09/What-is-a-Hackathon.png') no-repeat center center/cover; /* Blurred image of students */
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.modal-content {
-  background-color: #ffffff;
-  padding: 20px;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 12px;
+  color: white;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  margin-bottom: 30px;
+  /box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
 }
 
-.close-btn {
-  margin-top: 20px;
-  background-color: #e74c3c;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.header-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+  height:100%;
+  width: 1450px;
+  padding: 20px;
+  border-radius: 12px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
 }
 
-.close-btn:hover {
-  background-color: #c0392b;
-}
-
-/* Leaderboard List */
-.leaderboard-list {
-  list-style: none;
-  padding: 0;
-}
-
-.leaderboard-item {
-  background-color: #f8f9fa;
-  border: 1px solid #ddd;
-  padding: 15px;
+.home-header h1 {
+  font-size: 36px;
+  font-weight: bold;
   margin-bottom: 10px;
-  border-radius: 8px;
-  text-align: left;
 }
 
-/* View Details Button */
-.view-details-btn {
-  background-color: #1abc9c;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 8px 12px;
-  cursor: pointer;
+.home-header p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Hackathon Cards Section */
+.hackathon-cards-container {
+  padding-top: 30px;
+  padding-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  row-gap: 25px;
+  
+}
+
+/* Hackathon Card Styling */
+.hackathon-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   font-size: 14px;
+  width:450px;
+  height: 400px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.view-details-btn:hover {
-  background-color: #16a085;
+.hackathon-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
+}
+
+.hackathon-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Ensures proper scaling */
+}
+
+.hackathon-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6600; /* Orange color for emphasis */
+  margin: 15px 20px 10px;
+}
+
+.hackathon-description {
+  font-size: 16px;
+  color: #555;
+  margin: 0 20px 15px;
+  line-height: 1.4;
+}
+
+.evaluation-btn {
+  background: #ff6600; /* Orange button */
+  color: white;
+  width: 90%;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  margin: 0 20px 20px;
+  cursor: pointer;
+  margin-left: 5%;
+  transition: background 0.3s ease;
+}
+
+.evaluation-btn:hover {
+  background: #e65c00; /* Slightly darker orange on hover */
 }

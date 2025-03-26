@@ -1,127 +1,112 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/home.css";
 import Navbar from "../components/navbar";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
     const Navigate = useNavigate();
-    const [showLeaderboard, setShowLeaderboard] = useState(false); // To toggle leaderboard modal
-    const [selectedStudent, setSelectedStudent] = useState(null); // To show specific student details
+    // const hackathons = [
+    //     {
+    //         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTaitTQtn73TQryK6kvA3p8ZQSkmnnIHGJB5jZp8ZN7bqdLaDPSnMA80CzcQK-e9J8GPI&usqp=CAU", // Replace with actual image paths
+    //         name: "Hackathon 1",
+    //         description: "An exciting event focusing on AI and machine learning.",
+    //     },
+    //     {
+    //         image: "https://uploads.turbologo.com/uploads/design/preview_image/1266717/preview_image20201013-13757-6z6ow3.png", // Replace with actual image paths
+    //         name: "Hackathon 2",
+    //         description: "A collaborative coding challenge for web developers.",
+    //     },
+    //     {
+    //         image: "https://media.istockphoto.com/id/1216719216/vector/hackathon-logo.jpg?s=612x612&w=0&k=20&c=OS5iPVyAiXQiihTaH3ubHzPtsMHOEuTHb74-ZTKiYjY=", // Replace with actual image paths
+    //         name: "Hackathon 3",
+    //         description: "Explore creative solutions in blockchain technology.",
+    //     },
+    // ];
 
-    // Mock leaderboard data
-    const leaderboard = [
+    const hackathons = [
         {
-            name: "Student A",
-            class: "10th Grade",
-            competitions: {
-                participated: 10,
-                selected: 6,
-                rejected: 3,
-                onHold: 1
-            },
+         image : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTaitTQtn73TQryK6kvA3p8ZQSkmnnIHGJB5jZp8ZN7bqdLaDPSnMA80CzcQK-e9J8GPI&usqp=CAU",
+          name: "InnovateX 2025",
+          description: "A global innovation challenge where developers, designers, and entrepreneurs collaborate to solve real-world problems using cutting-edge technology."
         },
         {
-            name: "Student B",
-            class: "9th Grade",
-            competitions: {
-                participated: 8,
-                selected: 4,
-                rejected: 2,
-                onHold: 2
-            },
+         image : "https://uploads.turbologo.com/uploads/design/preview_image/1266717/preview_image20201013-13757-6z6ow3.png",
+          name: "CodeSprint",
+          description: "A 48-hour coding marathon that tests participants' problem-solving skills in AI, blockchain, and full-stack development."
         },
         {
-            name: "Student C",
-            class: "11th Grade",
-            competitions: {
-                participated: 7,
-                selected: 5,
-                rejected: 1,
-                onHold: 1
-            },
+          image : "https://media.istockphoto.com/id/1216719216/vector/hackathon-logo.jpg?s=612x612&w=0&k=20&c=OS5iPVyAiXQiihTaH3ubHzPtsMHOEuTHb74-ZTKiYjY=",
+          name: "Hack the Future",
+          description: "A student-focused hackathon that encourages participants to develop solutions for sustainability, healthcare, and smart cities."
         },
-    ];
+        {
+          image : "https://media.istockphoto.com/id/1216719216/vector/hackathon-logo.jpg?s=612x612&w=0&k=20&c=OS5iPVyAiXQiihTaH3ubHzPtsMHOEuTHb74-ZTKiYjY=",
+          name: "Byte Brawl",
+          description: "A competitive coding and hacking event where teams build software products in fintech, gaming, and cybersecurity."
+        },
+        {
+          image : "https://media.istockphoto.com/id/1216719216/vector/hackathon-logo.jpg?s=612x612&w=0&k=20&c=OS5iPVyAiXQiihTaH3ubHzPtsMHOEuTHb74-ZTKiYjY=",
+          name: "DevGenesis",
+          description: "A hybrid hackathon that merges Web3, AI, and cloud computing to push the boundaries of next-gen applications."
+        },
+        {
+          image : "https://media.istockphoto.com/id/1216719216/vector/hackathon-logo.jpg?s=612x612&w=0&k=20&c=OS5iPVyAiXQiihTaH3ubHzPtsMHOEuTHb74-ZTKiYjY=",
+          name: "BuildVerse",
+          description: "A virtual hackathon that fosters innovation in metaverse, NFT marketplaces, and immersive AR/VR experiences."
+        },
+        {
+         image : "https://media.istockphoto.com/id/1216719216/vector/hackathon-logo.jpg?s=612x612&w=0&k=20&c=OS5iPVyAiXQiihTaH3ubHzPtsMHOEuTHb74-ZTKiYjY=",
+          name: "CryptoQuest",
+          description: "A blockchain-focused hackathon where developers create DeFi apps, smart contracts, and cross-chain solutions."
+        },
+        {
+          image : "https://media.istockphoto.com/id/1216719216/vector/hackathon-logo.jpg?s=612x612&w=0&k=20&c=OS5iPVyAiXQiihTaH3ubHzPtsMHOEuTHb74-ZTKiYjY=",
+          name: "AI Nexus",
+          description: "An AI-powered hackathon challenging participants to build machine learning models for automation, predictive analysis, and NLP."
+        },
+        {
+          image : "https://media.istockphoto.com/id/1216719216/vector/hackathon-logo.jpg?s=612x612&w=0&k=20&c=OS5iPVyAiXQiihTaH3ubHzPtsMHOEuTHb74-ZTKiYjY=",
+          name: "Open Source Odyssey",
+          description: "A hackathon dedicated to contributing to open-source projects, improving existing tools, and developing new libraries."
+        },
+        {
+          image : "https://media.istockphoto.com/id/1216719216/vector/hackathon-logo.jpg?s=612x612&w=0&k=20&c=OS5iPVyAiXQiihTaH3ubHzPtsMHOEuTHb74-ZTKiYjY=",
+          name: "Hack4Good",
+          description: "A social impact hackathon where participants work on projects addressing climate change, education, and accessibility."
+        }
+      ];
+      
 
-    // Sorting leaderboard based on "selected" hackathons
-    const sortedLeaderboard = [...leaderboard].sort((a, b) => b.competitions.selected - a.competitions.selected);
-
-    const handleStudentClick = (student) => {
-        setSelectedStudent(student);
-    };
-
-    const closeStudentDetails = () => {
-        setSelectedStudent(null);
-    };
+      
 
     return (
         <>
             <Navbar />
             <div className="home-container">
-                {/* Button to view leaderboard */}
-                <div className="leaderboard-button-container">
-                    <button className="leaderboard-button" onClick={() => setShowLeaderboard(true)}>
-                        View Student Leaderboard
-                    </button>
-                </div>
+                {/* Top Section */}
+                <header className="home-header">
+                    <div className="header-overlay">
+                        <h1>Hackathons</h1>
+                        <p>Discover amazing hackathons. View analytics for each event.</p>
+                    </div>
+                </header>
 
-                {/* Problem Statement Boxes */}
-                <div className="horizontal-box-container">
-                    {Array.from({ length: 9 }).map((_, index) => (
-                        <div className="info-box" key={index}>
-                            <div className="box-title">Problem Statement {index + 1}</div>
-                            <div className="box-content">
-                                Description for Problem Statement {index + 1}...
-                            </div>
-                            <a className="start-evaluation-link" onClick={() => Navigate('/inputs')}>Start Evaluation</a>
+                {/* Hackathon Cards Section */}
+                <section className="hackathon-cards-container">
+                    {hackathons.map((hackathon, index) => (
+                        <div className="hackathon-card" key={index}>
+                            <img src={hackathon.image} alt={hackathon.name} className="hackathon-image" />
+                            <h2 className="hackathon-title">{hackathon.name}</h2>
+                            <p className="hackathon-description">{hackathon.description}</p>
+                            <button
+                                className="evaluation-btn"
+                                onClick={() => Navigate('/inputs')}
+                            >
+                                Start Evaluation
+                            </button>
                         </div>
                     ))}
-                </div>
-
-                {/* Leaderboard Modal */}
-                {showLeaderboard && (
-                    <div className="modal">
-                        <div className="modal-content">
-                            <h2>Student Leaderboard</h2>
-                            <ul className="leaderboard-list">
-                                {sortedLeaderboard.map((student, index) => (
-                                    <li key={index} className="leaderboard-item">
-                                        <div>
-                                            <strong>Name:</strong> {student.name}
-                                        </div>
-                                        <div>
-                                            <strong>Class:</strong> {student.class}
-                                        </div>
-                                        <div>
-                                            <strong>Competitions:</strong> {student.competitions.participated}
-                                        </div>
-                                        <button
-                                            className="view-details-btn"
-                                            onClick={() => handleStudentClick(student)}
-                                        >
-                                            View Details
-                                        </button>
-                                    </li>
-                                ))}
-                            </ul>
-                            <button className="close-btn" onClick={() => setShowLeaderboard(false)}>Close</button>
-                        </div>
-                    </div>
-                )}
-
-                {/* Student Details Modal */}
-                {selectedStudent && (
-                    <div className="modal">
-                        <div className="modal-content">
-                            <h2>Details for {selectedStudent.name}</h2>
-                            <p><strong>Class:</strong> {selectedStudent.class}</p>
-                            <p><strong>Total Competitions Participated:</strong> {selectedStudent.competitions.participated}</p>
-                            <p><strong>Selected:</strong> {selectedStudent.competitions.selected}</p>
-                            <p><strong>Rejected:</strong> {selectedStudent.competitions.rejected}</p>
-                            <p><strong>On Hold:</strong> {selectedStudent.competitions.onHold}</p>
-                            <button className="close-btn" onClick={closeStudentDetails}>Close</button>
-                        </div>
-                    </div>
-                )}
+                </section>
             </div>
         </>
     );

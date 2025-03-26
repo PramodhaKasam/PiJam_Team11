@@ -1,125 +1,227 @@
+/* General Body Styling */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9; /* Light grey tint for background */
+  color: #333333;
 }
 
-.header {
-  position: relative;
-  text-align: center;
+/* Leaderboard Page */
+.leaderboard-page {
   padding: 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
- .rubric,
- .ana,
- .ana2{
-  background-color: #ff6600;
+.header h1 {
+  text-align: center;
+  font-size: 28px;
+  color: #ff6600; /* Vibrant orange for header text */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Leaderboard Section */
+.leaderboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width:1200px;
+}
+
+.submission-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff; /* White background for submission */
+   /* Orange border */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submission-card:hover {
+  transform: scale(1.02); /* Slight zoom effect */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Submission Info Section */
+.submission-info {
+  flex: 1;
+}
+
+.submission-name {
+  font-size: 18px;
+  color: #333333; /* Neutral dark text */
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.know-more {
+  font-size: 14px;
+  color: #ff6600; /* Blue for "Know More" */
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 5px;
+}
+
+.know-more:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+/* Marks Section */
+.submission-actions {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.marks {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff6600; /* Orange for marks */
+}
+
+/* Options Button */
+.fixed-options {
+  position: fixed;
+  top: 100px;
+  right: 10px;
+  z-index: 1000;
+}
+
+.options-btn {
+  background-color: #ff6600; /* Vibrant orange */
   color: white;
-  padding: 10px 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  padding: 12px 20px; /* Larger size for prominence */
   cursor: pointer;
   font-size: 14px;
-  z-index: 999; 
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for prominence */
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.rubric{
+.options-btn:hover {
+  background-color: #e65c00; /* Darker orange on hover */
+  transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Dropdown Menu with Highlight */
+.dropdown {
   position: absolute;
-  top: 110px;
-  right: 10px;
+  top: 47px; /* Adjusted position for better spacing */
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: white; /* Light orange tint for dropdown highlight */
+  /* border: 2px solid #ff6600; Strong orange border for emphasis */
+  /* border-radius: 12px; */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Prominent shadow */
+  padding: 20px; /* Larger padding for better spacing */
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: scale(1); /* Dropdown initially scaled properly */
 }
 
-.ana{
-  position: absolute;
-  top: 110px;
-  right: 150px;
-}
-
-.ana2{
-  position: absolute;
-  top: 110px;
-  right: 290px;
-}
- .rubric,
- .ana,
- .ana2:hover {
-  background-color: #e65c00;
-}
-
-.leaderboard {
-  width: 1250px;
-  margin: 20px auto;
-}
-
-.submission-box {
-  width: 100%;
-  background-color: #fff5e6;
-  border: 1px solid #ffcc99;
-  border-radius: 5px;
-  padding: 15px;
-  margin-bottom: 15px;
-  text-align: left;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.submission-box:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.dropdown button {
+  background: #fffbf0; /* Light orange background */
+  color: #ff6600; /* Orange text */
+  padding: 12px 20px; /* Larger buttons inside dropdown */
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.submission-box h3 {
-  margin: 0 0 5px 0;
-  color: #333;
+.dropdown button:hover {
+  background: #ffe4cc; /* Slightly lighter orange */
+  color: #e65c00; /* Darker orange */
+  transform: scale(1.05); /* Hover scaling */
 }
 
+/* Blur Effect When Dropdown is Open */
+body.dropdown-active::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Dim and blur effect */
+  backdrop-filter: blur(5px); /* Applies the blur */
+  z-index: 999;
+}
+
+/* Modal and Backdrop */
 .modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5); /* Dim background overlay */
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 9999;
 }
 
 .modal-content {
-  background-color: #fff;
-  padding: 20px;
-  width: 80%;
-  max-width: 600px;
-  border-radius: 5px;
+  background: white;
+  padding: 50px; /* Increased padding for larger size */
+  border-radius: 16px; /* Larger radius for modern design */
   text-align: center;
+  max-width: 800px; /* Enlarged size for better visibility */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in animation */
 }
 
 .modal-content h2 {
-  color: #ff6600;
+  color: #ff6600; /* Orange heading text */
+  margin-bottom: 15px;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-.modal-content ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.modal-content ul li {
-  margin: 10px 0;
+.modal-content p {
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 20px;
 }
 
 .close-btn {
   margin-top: 20px;
-  background-color: #ff6600;
+  background-color: #ff6600; /* Orange button */
   color: white;
-  padding: 10px 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  padding: 12px 20px; /* Larger size for prominence */
   cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .close-btn:hover {
-  background-color: #e65c00;
+  background-color: #e65c00; /* Darker orange on hover */
+  transform: scale(1.05); /* Hover scaling */
 }
 
-
+/* Animation for modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

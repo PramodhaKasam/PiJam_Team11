@@ -1,83 +1,123 @@
+/* Body Styling */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #ded5e8, #c1d0eb); /* Modern Gradient Background */
+    background-color: #fff5e6; /* Soft orange background */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
-
-.login-container {
-    background: #ffffff; 
-    padding: 25px 30px;
+/* Main Login Page Styling */
+.login-page {
+    display: flex;
+    width: 1000px;
+    height: 550px; /* Restrict maximum width for larger screens */
+    background: #ffffff; /* White background for the container */
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    width: 300px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin: 0 auto; /* Center alignment */
+}
+
+/* Welcome Section Styling (Left) */
+.welcome-section {
+    flex: 1;
+    background: linear-gradient(to bottom right, #ffbb88, #ff884d); /* Orange gradient */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 30px;
+}
+
+.welcome-section h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
     text-align: center;
 }
-  
- 
-.login-form h2 {
-    color: #333333; 
-    font-size: 24px;
+
+.welcome-section p {
+    font-size: 18px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
-.input-group {
-    margin-bottom: 18px;
-    text-align: left;
-}
-
-.input-group label {
-    font-size: 14px;
-    color: #555555; 
-    display: block;
-    margin-bottom: 5px;
-}
-
-.input-group input {
-    width: 90%;
-    padding: 10px 12px;
-    border: 1px solid #dddddd; 
-    border-radius: 8px;
-    font-size: 14px;
-}
-
-.input-group input:focus {
-    border-color: #85b7d9; 
-    outline: none;
-    box-shadow: 0 0 4px rgba(133, 183, 217, 0.4); 
-}
-
-button {
-    background: #5a9bd4; 
-    color: #ffffff; 
-    padding: 12px 18px;
+.welcome-section button {
+    background: #ffffff; /* White button */
+    color: #ff6600; /* Orange text */
+    padding: 12px 20px;
     font-size: 16px;
+    font-weight: bold;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s ease;
 }
 
-button:hover {
-    background: #4a8bc6; 
+.welcome-section button:hover {
+    background: #ffcc99; /* Light orange hover effect */
 }
 
-p {
-    margin-top: 15px;
-    font-size: 14px;
-    color: #666666; 
+/* Login Section Styling (Right) */
+.login-section {
+    flex: 1;
+    padding: 60px 40px; /* Slightly more padding for a spacious feel */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-p a {
-    color: #5a9bd4; 
-    text-decoration: none;
+.login-form h2 {
+    font-size: 35px;
+    color: #ff6600; /* Orange title */
+    margin-bottom: 20px;
 }
 
-p a:hover {
-    text-decoration: underline; 
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+    width: 300px; /* Full width for inputs */
+}
+
+.input-group label {
+    font-size: 16px; /* Larger font for labels */
+    color: #555555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px; /* Larger font for input text */
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+}
+
+.input-group input:focus {
+    border-color: #ff6600; /* Orange border on focus */
+    box-shadow: 0 0 5px rgba(255, 102, 0, 0.4);
+    outline: none;
+}
+
+.login-btn {
+    background: #ff6600; /* Orange button */
+    color: white;
+    padding: 15px;
+    font-size: 18px; /* Bigger button */
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+    background: #e65c00; /* Slightly darker orange */
 }
