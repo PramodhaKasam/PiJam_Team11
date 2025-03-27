@@ -4,7 +4,7 @@ import '../styles/navbar.css'
 function Navbar() {
   return (
     <nav className="navbar">
-      <h1 className="navbar-brand">Project Name</h1>
+      <h1 className="navbar-brand">SamikshaMitra</h1>
     </nav>
   );
 }

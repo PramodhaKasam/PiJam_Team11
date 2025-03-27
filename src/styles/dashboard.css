@@ -1,96 +1,190 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f2f2f2; /* Light grey tint for the background */
+  color: #333333;
+}
+
 .dashboard {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .dashboard-header h1 {
-    margin-top: 100px;
-    color: #ff6600;
-    font-size: 24px;
-  }
-  
-  .dashboard-header input {
-    width: 60px;
-    text-align: center;
-  }
-  
-  .parameters {
-    margin: 20px 0;
-  }
-  
-  .parameter-table {
-    width: 80%;
-    margin: 0 auto;
-    border-collapse: collapse;
-    background-color: #fff5e6;
-  }
-  
-  .parameter-table th,
-  .parameter-table td {
-    border: 1px solid #ffcc99;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .parameter-table th {
-    background-color: #ffcc99;
-    font-weight: bold;
-  }
-  
-  .parameter-details {
-    margin-top: 20px;
-    background-color: #ffcc99;
-    padding: 15px;
-    border-radius: 5px;
-    border: 1px solid #ff6600;
-    text-align: left;
-    width: 70%;
-    margin: 20px auto;
-  }
-  
-  .parameter-details h3 {
-    color: #333;
-  }
-  
-  .submission-link a {
-    display: inline-block;
-    margin-top: 20px;
-    color: #ff6600;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .submission-link a:hover {
-    text-decoration: underline;
-  }
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 80px;
+}
 
-  .summary {
-    margin: 20px 0;
-    padding: 10px;
-    background-color: #fff5e6;
-    border: 1px solid #ffcc99;
-    border-radius: 5px;
-  }
+/* Header */
+.dashboard-header {
+  margin-bottom: 20px;
+}
 
-  .submission-feedback {
-    margin-top: 30px;
-    padding: 15px;
-    background-color: #fff5e6;
-    border: 1px solid #ffcc99;
-    border-radius: 5px;
-    text-align: left;
-    width: 70%;
-    margin: 20px auto;
-  }
-  
-  .submission-feedback h2 {
-    color: #ff6600;
-  }
-  
-  .submission-feedback p {
-    margin: 10px 0;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  
-  
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-header h1 {
+  font-size: 28px; /* Increased font size for prominence */
+  font-weight: 700; /* Bold for stronger visual hierarchy */
+  color: #ff6600; /* Orange text */
+}
+
+.dashboard-header .marks {
+  font-size: 24px; /* Larger font size */
+  font-weight: 700; /* Bold for emphasis */
+  color: #ff6600; /* Orange text */
+}
+
+/* Summary Section */
+.summary {
+  margin-bottom: 20px;
+}
+
+.summary h2 {
+  font-size: 24px; /* Bigger font size for headings */
+  font-weight: bold;
+  color: #333333;
+}
+
+.summary p {
+  font-size: 16px; /* Slightly larger for readability */
+  color: #555555;
+}
+
+/* Parameter Breakdown Accordion */
+.parameters {
+  margin-bottom: 30px;
+}
+
+.parameters h2 {
+  font-size: 24px; /* Bigger heading for emphasis */
+  font-weight: bold;
+  color: #ff6600; /* Orange for heading */
+  margin-bottom: 15px;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased spacing between accordion items */
+}
+
+.accordion-item {
+  background-color: #ffffff; /* Clean white background */
+  border: 2px solid #ffcc99; /* Stronger orange border */
+  border-radius: 12px; /* Rounded corners for modern look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px; /* Larger padding for spacious design */
+  font-size: 18px; /* Larger font size for headings */
+  font-weight: 600; /* Semi-bold for visibility */
+  color: #333333;
+  background: #fffaf0; /* Light orange tint */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #ffe4cc; /* Slightly darker hover effect */
+}
+
+.accordion-header input {
+  width: 80px; /* Wider input box for better usability */
+  padding: 8px;
+  text-align: right;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.accordion-body {
+  padding: 20px; /* Increased padding for spacious design */
+  background-color: #fff5e6; /* Subtle orange background for details */
+}
+
+.accordion-body p {
+  margin-bottom: 10px;
+  font-size: 16px; /* Larger font size for readability */
+  color: #555555;
+}
+
+/* Highlights and Improvements Section */
+.submission-feedback {
+  margin-bottom: 30px;
+}
+
+.submission-feedback h2 {
+  font-size: 24px; /* Increased font size for headings */
+  font-weight: bold;
+  color: #ff6600; /* Orange for heading */
+  margin-bottom: 15px;
+}
+
+/* Highlights Section with Tick Marks */
+.highlight-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.highlight-list li {
+  margin-bottom: 10px;
+  padding-left: 30px;
+  position: relative;
+  font-size: 16px; /* Slightly larger text */
+  color: #333333;
+}
+
+.highlight-list li::before {
+  content: '✔'; /* Tick mark for highlights */
+  color: #28a745; /* Green for tick marks */
+  font-size: 18px; /* Adjust size for visibility */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Improvements Section with Alerts */
+.improvement-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.improvement-list li {
+  margin-bottom: 10px;
+  padding-left: 30px;
+  position: relative;
+  font-size: 16px; /* Slightly larger text */
+  color: #555555;
+}
+
+.improvement-list li::before {
+  content: '⚠'; /* Alert icon for improvements */
+  color: #ffc107; /* Yellow for alerts */
+  font-size: 18px; /* Adjust size for visibility */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Submission Link */
+.submission-link {
+  text-align: center; /* Center-align link */
+}
+
+.submission-link a {
+  font-size: 16px; /* Larger font size for link */
+  color: #007bff; /* Blue link */
+  text-decoration: underline;
+}
+
+.submission-link a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}

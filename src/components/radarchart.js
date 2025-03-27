@@ -19,27 +19,27 @@ const StackedBarChart = ({ submissions }) => {
     labels: submissions.map((sub) => sub.name), // Submission names
     datasets: [
       {
-        label: "Clarity",
+        label: "Understanding of Pollution Types",
         data: submissions.map((sub) => sub.parameters.Clarity),
         backgroundColor: "#FFCC99", // Light orange
       },
       {
-        label: "Presentation",
+        label: "Causes & Impact Analysis",
         data: submissions.map((sub) => sub.parameters.Presentation),
         backgroundColor: "#FF9999", // Light red
       },
       {
-        label: "Research",
+        label: "Proposed Solutions & Feasibility",
         data: submissions.map((sub) => sub.parameters.Research),
         backgroundColor: "#99CCFF", // Light blue
       },
       {
-        label: "Originality",
+        label: "Presentation & Clarity",
         data: submissions.map((sub) => sub.parameters.Originality),
         backgroundColor: "#99FF99", // Light green
       },
       {
-        label: "Relevance",
+        label: "Data & Research Support",
         data: submissions.map((sub) => sub.parameters.Relevance),
         backgroundColor: "#FFD699", // Light yellow
       },
